@@ -19,8 +19,7 @@ steps:
       - 'CLOUDSDK_CONTAINER_CLUSTER=javajive'
 
   - name: 'gcr.io/cloud-builders/kubectl'
-    args:s javajive
-    Fetching cluster endpoint and auth data.
+    args:
       - 'set'
       - 'image'
       - 'deployment/${_DEPLOYMENT}'
@@ -35,6 +34,6 @@ steps:
 substitutions:
   _CONTAINER_NAME: hacksummit22
   _NAMESPACE: hacksummit
-  _DEPLOYMENT: hacksummit-deployment
+  _DEPLOYMENT: hacksummit22-deployment
   _DEPLOYMENT_FILE: hacksummit22
   _IMAGE_URI: eu.gcr.io/javajive-001/hacksummit22
