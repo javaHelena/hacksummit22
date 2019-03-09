@@ -18,7 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: javajive
-  name: hacksummit-deployment
+  name: hacksummit22-deployment
 spec:
   replicas: 1
   selector:
@@ -30,6 +30,6 @@ spec:
         app: hacksummit22
     spec:
       containers:
-        - image: eu.gcr.io/javajive-001/gp-phoenix-api:latest
+        - image: eu.gcr.io/javajive-001/hacksummit22:latest
           imagePullPolicy: Always
           name: hacksummit22
