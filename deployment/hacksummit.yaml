@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: javajive
+  name: hacksummit22
+  labels:
+    app: hacksummit22
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: hacksummit22
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: javajive
+  name: hacksummit-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hacksummit22
+  template:
+    metadata:
+      labels:
+        app: hacksummit22
+    spec:
+      containers:
+        - image: eu.gcr.io/javajive-001/gp-phoenix-api:latest
+          imagePullPolicy: Always
+          name: hacksummit22
