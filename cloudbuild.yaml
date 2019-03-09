@@ -19,7 +19,8 @@ steps:
       - 'CLOUDSDK_CONTAINER_CLUSTER=javajive'
 
   - name: 'gcr.io/cloud-builders/kubectl'
-    args:
+    args:s javajive
+    Fetching cluster endpoint and auth data.
       - 'set'
       - 'image'
       - 'deployment/${_DEPLOYMENT}'
@@ -27,7 +28,7 @@ steps:
       - '-n'
       - '${_NAMESPACE}'
     env:
-      - 'CLOUDSDK_COMPUTE_ZONE=europe-north1-c'
+      - 'CLOUDSDK_COMPUTE_ZONE=europe-north1-a'
       - 'CLOUDSDK_CONTAINER_CLUSTER=phoenix-staging'
 
 
