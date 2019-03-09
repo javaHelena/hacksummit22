@@ -1,10 +1,10 @@
 {
-"kind": "Namespace",
-"apiVersion": "v1",
-"metadata": {
-"name": "javajive",
-"labels": {
-"name": "javajive"
-}
-}
+  "kind": "Namespace",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "javajive",
+    "labels": {
+      "name": "javajive"
+    }
+  }
 }

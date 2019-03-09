@@ -33,7 +33,7 @@ steps:
 
 substitutions:
   _CONTAINER_NAME: hacksummit22
-  _NAMESPACE: hacksummit
+  _NAMESPACE: javajive
   _DEPLOYMENT: hacksummit22-deployment
   _DEPLOYMENT_FILE: hacksummit22
   _IMAGE_URI: eu.gcr.io/javajive-001/hacksummit22
